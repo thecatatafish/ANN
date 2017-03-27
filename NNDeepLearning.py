@@ -1,7 +1,7 @@
 import numpy as np
 '''
-Neural network using sigmoid activation function and gradient decent
-back probiation. Arbitrary number of hidden layers and hidden units implemented
+Neural network using sigmoid activation function and gradient descent
+back propagation. Arbitrary number of hidden layers and hidden units implemented
 '''
 class NeuralNetwork:
     

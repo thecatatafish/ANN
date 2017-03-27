@@ -2,6 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from NNDeepLearning import NeuralNetwork
 
+'''
+Example on how to use the class:
+    NeuralNetwork(trainingData,trainingLabelsAsOneHot,[Number of nodes in HiddenLayer1,
+    Number of nodes in HiddenLayer2,...,Number of nodes in HiddenLayerN],batchSize)
+'''
 def genData(N):
     D = 2 # dimensionality
     K = 3 # number of classes
@@ -41,9 +46,5 @@ for i in range(1,epochs):
         print 'Test Cost: {0:.3f} Test classification rate {1:.1f}%\n'.format((testT * np.log(TestPrediction)).sum() / len(testY),100*NN.classificationRate(testT,TestPrediction))  
         
 plt.figure()
+plt.title('Cost')
 plt.plot(NN.cost)
-
-N=300
-X,T,Y = genData(N)   
-TestPrediction = NN.forwardProp(X)  
-classificationRate = NN.classificationRate(T,TestPrediction)
